@@ -12,4 +12,10 @@ if (process.env.JAWSDB_URL) {
     database: "burger_db"
   });
 }
+
+connection.connect((err)=>{
+    if (err) throw err;
+    console.log("Connection to database successful");
+});
+
 module.exports = connection;
